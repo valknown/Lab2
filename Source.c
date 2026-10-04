@@ -1,8 +1,19 @@
 #include <stdio.h>
 #include <locale.h>
 
+void task1();
+void task2();
+void task3();
 
-int task1()
+void main()
+{
+	setlocale(LC_ALL, "RUS");
+	task1();
+	task2();
+	task3();
+}
+
+void task1()
 
 {
 	
@@ -27,7 +38,7 @@ int task1()
 	printf("%g разделить %e равно %f\n\n\n", 5., 2000000., 5. / 2000000); // подзадание 10
 }
 
-int task2()
+void task2()
 {
 	int N, K;
 	N = 11;
@@ -39,7 +50,7 @@ int task2()
 	printf("Текущий час = %.2f суток и текущая минута = %.2f часа\n\n", N / 24., K / 60.);
 }
 
-int task3()
+void task3()
 {
 	int n = 2;
 	float L = 133.;
@@ -48,12 +59,4 @@ int task3()
 
 
 	printf("Дано:\n \t %d\n \t %.0f \n \t ------- \nОтвет: \n \t %+0*.*f", n, L, k+m+2, m, n/L);
-}
-
-int main()
-{
-	setlocale(LC_ALL, "RUS");
-	task1();
-	task2();
-	task3();
 }
